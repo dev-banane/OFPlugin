@@ -14,8 +14,8 @@ COFPlugIn::COFPlugIn()
     : CPlugIn(EuroScopePlugIn::COMPATIBILITY_CODE,
         "OFPlugin",
         "0.1.0",
-        "TODO Author",
-        "TODO Copyright")
+        "Jakob Pütz",
+        "AGPL v3")
     , m_fetcher(m_store)
     , m_trackAudioClient(m_store)
 {
