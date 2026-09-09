@@ -1,6 +1,7 @@
 #include "TransceiverFetcher.h"
 
 #include "FrequencyStore.h"
+#include "FrequencyUtil.h"
 
 #include <winhttp.h>
 
@@ -28,12 +29,6 @@ namespace
     bool IsChatterFrequency(double mhz)
     {
         return std::fabs(mhz - 121.500) < 0.0005 || std::fabs(mhz - 122.800) < 0.0005;
-    }
-
-    // AFV reports frequencies with a small per-connection offset
-    double HzToMhz(long long hz)
-    {
-        return static_cast<double>(llround(static_cast<double>(hz) / 1000.0)) / 1000.0;
     }
 
     bool PickFrequency(const std::vector<double>& mhz, double& out)

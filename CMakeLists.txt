@@ -22,8 +22,11 @@ add_library(OFPlugin SHARED
     src/OFPlugIn.cpp
     src/FrequencyStore.h
     src/FrequencyStore.cpp
+    src/FrequencyUtil.h
     src/TransceiverFetcher.h
     src/TransceiverFetcher.cpp
+    src/TrackAudioClient.h
+    src/TrackAudioClient.cpp
 )
 
 target_include_directories(OFPlugin PRIVATE

@@ -17,9 +17,11 @@ COFPlugIn::COFPlugIn()
         "TODO Author",
         "TODO Copyright")
     , m_fetcher(m_store)
+    , m_trackAudioClient(m_store)
 {
     RegisterTagItemType("Pilot frequency", TAG_ITEM_PILOT_FREQUENCY);
     m_fetcher.Start();
+    m_trackAudioClient.Start();
 }
 
 COFPlugIn::~COFPlugIn()

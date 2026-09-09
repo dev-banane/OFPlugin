@@ -6,6 +6,7 @@
 #include "EuroScopePlugIn.h"
 
 #include "FrequencyStore.h"
+#include "TrackAudioClient.h"
 #include "TransceiverFetcher.h"
 
 class COFPlugIn : public EuroScopePlugIn::CPlugIn
@@ -28,4 +29,5 @@ public:
 private:
     FrequencyStore m_store;
     TransceiverFetcher m_fetcher;
+    TrackAudioClient m_trackAudioClient;
 };
