@@ -1,0 +1,29 @@
+# CMake build directories
+build/
+build-*/
+out/
+cmake-build-*/
+
+# Visual Studio / MSVC artifacts
+.vs/
+*.dll
+*.lib
+*.pdb
+*.obj
+*.exp
+*.ilk
+*.idb
+*.log
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+
+# Keep the vendored EuroScope SDK's own .lib (it's a dependency, not a build artifact)
+!vendor/euroscope-sdk/lib/*.lib
+
+# IDE
+.idea/
